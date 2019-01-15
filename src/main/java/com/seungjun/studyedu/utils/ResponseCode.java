@@ -6,7 +6,6 @@ public enum ResponseCode {
 	 * 일반 성공 0 
 	 * 기타 에러 9999
 	 * 공통 유저 관련 정보는 5000
-	 * 멘티 관련 정보는 6000
 	 */
 	
 	SUCCESS(0, ""),
