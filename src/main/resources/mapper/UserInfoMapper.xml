@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace="com.seungjun.studyedu.mapper.MainDbDataMapper">
+	
+	
+	<select id="checkLoginInfo" resultType="java.util.HashMap" parameterType="string">
+		SELECT 
+			user_key, user_pw, user_mode
+		FROM
+			menti_user_info
+		WHERE
+			user_id = #{user_id}
+			
+		UNION
+		
+		SELECT 
+			user_key, user_pw, user_mode
+		FROM
+			mento_user_info
+		WHERE
+			user_id = #{user_id}
+	</select>
+
+
+</mapper>
