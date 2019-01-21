@@ -1,6 +1,8 @@
 package com.seungjun.studyedu.vo.result;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 
 /**
@@ -9,10 +11,11 @@ import lombok.Data;
  *
  */
 @Data
+@Getter @Setter
 public class LoginResultVO extends HeaderInfoVO{
-
+  
 	private String user_key = "";
-	
+
 	private int user_mode = -1;
 	
 }
