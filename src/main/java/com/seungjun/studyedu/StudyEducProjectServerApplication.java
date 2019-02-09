@@ -37,6 +37,6 @@ public class StudyEducProjectServerApplication {
 	   Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml");           
 	   sessionFactory.setMapperLocations(res);   
 	   
-	   	return sessionFactory.getObject();   
+	   return sessionFactory.getObject();   
 	}
 }
