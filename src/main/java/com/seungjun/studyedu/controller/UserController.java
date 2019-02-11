@@ -59,7 +59,7 @@ public class UserController {
 		
 		
 		LoginResultVO result = new LoginResultVO();
-		
+		//
 		try { 
 			
 			HashMap<String, Object> loginInfo = momentoService.checkLoginInfo(user_id);
