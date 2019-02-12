@@ -17,7 +17,7 @@ public interface MainDbDataMapper {
 	 * @return
 	 * @throws Exception
 	 */
-	public HashMap<String, Object> checkLoginInfo(@Param("user_id") String user_id) throws Exception;
+	public HashMap<String, Object> checkLoginInfo(@Param("user_key") String user_key) throws Exception;
 	
 	
 }

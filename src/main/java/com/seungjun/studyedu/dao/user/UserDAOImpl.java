@@ -15,8 +15,8 @@ public class UserDAOImpl implements UserDAO{
 	
 	
 	@Override
-	public HashMap<String, Object> checkLoginInfo(String user_id) throws Exception {
+	public HashMap<String, Object> checkLoginInfo(String user_key) throws Exception {
 		// TODO Auto-generated method stub
-		return dm.checkLoginInfo(user_id);
+		return dm.checkLoginInfo(user_key);
 	}
 }
