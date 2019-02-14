@@ -54,30 +54,24 @@ public class UserController {
 		String msg = ResponseCode.SUCCESS.getMsg();
 
 		
-		String user_id = (String)json.get("user_id");
-		String user_pw = (String)json.get("user_pw");
+		String user_key = (String)json.get("user_key");
 		
 		
 		LoginResultVO result = new LoginResultVO();
-		
+		//
 		try { 
 			
-			HashMap<String, Object> loginInfo = momentoService.checkLoginInfo(user_id);
+			HashMap<String, Object> loginInfo = momentoService.checkLoginInfo(user_key);
 			
 			if(loginInfo != null && loginInfo.size() > 0) {
 				
-				if(((String)loginInfo.get("user_pw")).equals(user_pw)) {
-					
-					result.setUser_key((String)loginInfo.get("user_key"));
-					result.setUser_mode((int)loginInfo.get("user_mode"));
-					
-					
-				}else {
-
-					code = ResponseCode.FAIL_LOGIN_NOMATCHING_PW.getCode();
-					msg = ResponseCode.FAIL_LOGIN_NOMATCHING_PW.getMsg();
-				}
-				
+				result.setUser_key((String)loginInfo.get("user_key"));
+				result.setUser_nickname((String)loginInfo.get("user_nickname"));
+				result.setUser_login_type((int)loginInfo.get("user_login_type"));
+				result.setUser_image_url((String)loginInfo.get("user_image_url"));
+				result.setUser_email((String)loginInfo.get("user_email"));
+				result.setLevel_type((int)loginInfo.get("level_type"));
+				result.setUser_step_percent((int)loginInfo.get("user_step_percent"));
 				
 			}else {
 				

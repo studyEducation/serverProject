@@ -17,6 +17,6 @@ public interface UserDAO {
 	 * @return
 	 * @throws Exception
 	 */
-	public HashMap<String, Object> checkLoginInfo(String user_id) throws Exception;	
+	public HashMap<String, Object> checkLoginInfo(String user_key) throws Exception;	
 	
 }

@@ -16,9 +16,9 @@ public class MomentoServiceImpl implements MomentoService{
 	UserDAO userDAO;
 
 	@Override
-	public HashMap<String, Object> checkLoginInfo(String user_id) throws Exception {
+	public HashMap<String, Object> checkLoginInfo(String user_key) throws Exception {
 		// TODO Auto-generated method stub
-		return userDAO.checkLoginInfo(user_id);
+		return userDAO.checkLoginInfo(user_key);
 		
 	}
 

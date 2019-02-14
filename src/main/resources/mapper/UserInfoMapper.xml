@@ -8,20 +8,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="checkLoginInfo" resultType="java.util.HashMap" parameterType="string">
 		SELECT 
-			user_key, user_pw, user_mode
+			*
 		FROM
-			menti_user_info
+			TB_User
 		WHERE
-			user_id = #{user_id}
-			
-		UNION
-		
-		SELECT 
-			user_key, user_pw, user_mode
-		FROM
-			mento_user_info
-		WHERE
-			user_id = #{user_id}
+			user_key = #{user_key}
 	</select>
 
 
